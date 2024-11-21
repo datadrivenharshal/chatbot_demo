@@ -22,8 +22,12 @@ from langchain_community.vectorstores import FAISS
 import base64
 # Load environment variables
 load_dotenv()
-groq_api_key = os.getenv("GROQ_API_KEY")
-hf_token=os.getenv("HF_TOKEN")
+#groq_api_key = os.getenv("GROQ_API_KEY")
+hf_token="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"
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
+LANGCHAIN_API_KEY="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"
+LANGCHAIN_PROJECT="AdvenBuddy_demo"
 
 llm=ChatGroq(groq_api_key="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", model="Llama3-8b-8192")
 
