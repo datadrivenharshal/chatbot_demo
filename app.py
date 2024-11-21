@@ -5,7 +5,6 @@ from langchain_groq import ChatGroq
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory, InMemoryChatMessageHistory
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -72,7 +71,7 @@ st.title("AdvenBuddy: your Personalized assistant for Adventures..")
 def create_vector_embeddings():
     if "vectors" not in st.session_state:
         st.session_state.embeddings=HuggingFaceEmbeddings()
-        st.session_state.loader=PyPDFLoader("D:\\chatbot_demo1\\advenbuddy_rag_pdfs_demo.pdf")
+        st.session_state.loader=PyPDFLoader("D:\\chatbot_demo\\advenbuddy_rag_pdfs_demo.pdf")
         st.session_state.docs=st.session_state.loader.load()
         st.session_state.text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
         st.session_state.final_documents=st.session_state.text_splitter.split_documents(st.session_state.docs[:50])
