@@ -22,10 +22,10 @@ from langchain_community.vectorstores import FAISS
 import base64
 # Load environment variables
 load_dotenv()
-#groq_api_key = os.getenv("GROQ_API_KEY")
+groq_api_key = os.getenv("GROQ_API_KEY")
 hf_token=os.getenv("HF_TOKEN")
 
-llm=ChatGroq(groq_api_key="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", model="Llama3-8b-8192")
+llm=ChatGroq(groq_api_key=groq_api_key, model="Llama3-8b-8192")
 
 
 
