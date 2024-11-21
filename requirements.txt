@@ -1,0 +1,15 @@
+streamlit
+langchain
+langchain-community
+langchain-groq
+langchain-huggingface
+langchain-core
+langchain-text-splitters
+python-dotenv
+faiss-cpu
+Pypdf
+pdfplumber
+ipykernel
+pypdf
+bs4
+langchain-chroma
