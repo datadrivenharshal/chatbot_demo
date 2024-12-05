@@ -28,10 +28,9 @@ from langchain_community.vectorstores import FAISS
 # Load environment variables
 load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
-hf_token = os.getenv("HF_TOKEN")
+hf_token=os.getenv("HF_TOKEN")
 
-# LLM Configuration
-llm = ChatGroq(groq_api_key=groq_api_key, model="Llama3-8b-8192")
+llm=ChatGroq(groq_api_key=groq_api_key, model="Llama3-8b-8192")
 
 # Prompt Template
 prompt = ChatPromptTemplate.from_template(
