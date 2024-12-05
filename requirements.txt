@@ -13,3 +13,4 @@ ipykernel
 pypdf
 bs4
 langchain-chroma
+streamlit-chat
