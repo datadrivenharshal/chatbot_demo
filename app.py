@@ -110,7 +110,7 @@ if user_input:
         response = retrieval_chain.invoke({"input": user_input})
         bot_reply = response["answer"]
         st.session_state.chat_history.append({"user": user_input, "bot": bot_reply})
-        st.markdown(f"<p style='font-size: 20px;'>{bot_reply}</p>", unsafe_allow_html=True)
+        #st.markdown(f"<p style='font-size: 20px;'>{bot_reply}</p>", unsafe_allow_html=True)
 
         # Debug: Print response time
         print(f"Response time: {time.process_time() - start} seconds")
