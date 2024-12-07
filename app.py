@@ -93,9 +93,8 @@ def create_vector_embeddings():
 # Chat interface
 user_input = st.text_input("Enter your question:")
 
-# Button to create document embeddings
-if st.button("Create Embeddings"):
-    create_vector_embeddings()
+
+create_vector_embeddings()
 
 # Process user input
 if user_input:
